@@ -13,17 +13,21 @@ In the Azure Service Principal go to 'Certifications and Secrets' and create a n
 Go back to the Azure Key Vault and add a the service principal 'New Role Assignment' as a 'Key Vault Contributor'. 
 
 ## Deploy AKS with Terraform
+```
 terraform init
 terraform apply
+```
 
 ## Connnect Kubectl to deployed AKS
-
+```
 az aks get-credentials --resource-group $(terraform output resource_group_name) --name $(terraform output kubernetes_cluster_name)
+```
 
 ##
 Deploy Vault with Helm 
+```
 helm install vault hashicorp/vault -f values.yaml
-
+```
 
 
 

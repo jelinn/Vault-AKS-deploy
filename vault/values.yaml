@@ -36,4 +36,4 @@ server:
   postStart:
   - "/bin/sh"
   - "-c"
-  - "sleep 5 && cp /bootstrap.sh /tmp/bootstrap.sh && chmod +x /tmp/bootstrap.sh && /tmp/bootstrap.sh"
+  - "sleep 5 && cp /vault/bootstrap.sh /tmp/bootstrap.sh && chmod +x /tmp/bootstrap.sh && /tmp/bootstrap.sh"
